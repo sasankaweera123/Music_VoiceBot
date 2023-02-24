@@ -28,11 +28,12 @@ def takeBroCommand():
         print(e)
     return command
 
+
 def runBro():
     command = takeBroCommand()
     if 'play' in command:
-        song = command.replace('play','')
-        broTalk('playing '+song)
+        song = command.replace('play', '')
+        broTalk('playing ' + song)
         print('playing', song)
         pywhatkit.playonyt(song)
     elif 'joke' in command:
@@ -40,6 +41,7 @@ def runBro():
         print(pyjokes.get_joke())
     else:
         broTalk('I did not get that,  please repeat it again')
+
 
 while True:
     runBro()
